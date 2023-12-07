@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Impact Factor",
+    "description": "Add the impact factor to google scholar page",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "js": ["scripts/content.js"],
+            "matches": [
+                "https://scholar.google.com/citations?user=*"
+            ]
+        }
+    ]
+  }

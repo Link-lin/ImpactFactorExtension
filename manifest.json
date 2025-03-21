@@ -5,10 +5,21 @@
     "version": "1.0",
     "content_scripts": [
         {
-            "js": ["scripts/content.js"],
+            "js": [
+                "lib/xlsx.full.min.js",
+                "scripts/content.js"
+            ],
             "matches": [
                 "https://scholar.google.com/citations?user=*"
             ]
         }
-    ]
-  }
+    ],
+    "permissions": [
+        "storage",
+        "activeTab"
+    ],
+    "web_accessible_resources": [{
+        "resources": ["lib/impact_factor.xlsx"],
+        "matches": ["https://scholar.google.com/*"]
+    }]
+}
